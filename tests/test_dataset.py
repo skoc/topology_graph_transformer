@@ -33,18 +33,16 @@ def test_patient_folds():
         assert len(train_idx) + len(test_idx) == len(df)
 
 
-def test_staging_lung_only():
+def test_staging():
     lung = load_slides(CSV, cohort="lung", task="staging")
+    kidney = load_slides(CSV, cohort="kidney", task="staging")
     assert set(lung["stage"]).issubset(STAGE_LABELS)
-    try:
-        load_slides(CSV, cohort="kidney", task="staging")
-        raise AssertionError("kidney staging should be empty")
-    except ValueError:
-        pass
+    assert set(kidney["stage"]).issubset(STAGE_LABELS)
+    assert len(kidney) > 800
 
 
 if __name__ == "__main__":
     test_typing_labels()
     test_patient_folds()
-    test_staging_lung_only()
+    test_staging()
     print("ok")
