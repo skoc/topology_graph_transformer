@@ -16,9 +16,9 @@ python main.py --mode train --task typing --cohort kidney --fold 0 --graph_dir /
 `--task` is `typing` or `staging`. `--cohort` is `lung` or `kidney`.
 
 ```bibtex
-@article{koca2026tcgt,
+@article{koc2026tcgt,
   title={Topology-Conditioned Graph Learning for Cancer Classification in Whole Slide Images},
-  author={Koca, Soner and Caki, Onur and Gunduz-Demir, Cigdem},
+  author={Koc, Soner and Caki, Onur and Gunduz-Demir, Cigdem},
   year={2026}
 }
 ```
