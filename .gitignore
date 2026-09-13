@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+runs/
+data/ph/
+data/local_topo/
+*.pt
+*.npz
+!data/slides.csv
+.DS_Store
